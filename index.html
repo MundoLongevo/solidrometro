@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Solitômetro RaVardi - Edição Psicopatia Social</title>
+    <title>Solidômetro RaVardi - 6 Níveis de Antissocialidade</title>
     
     <!-- Ícone 70+ vibrante -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23d4af37'/><text x='18' y='75' font-size='60' fill='%23000' font-weight='900'>70+</text></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23d4af37'/><text x='18' y='75' font-size='60' fill='%23000' font-weight='900'>70+</text></svg>">
     
-    <meta name="description" content="Descubra seu nível no Solidômetro RaVardi - 30 perguntas para medir seu isolamento profissional.">
-    <meta name="author" content="Ricardo de Faria Barros">
+    <meta name="description" content="Descubra seu nível no Solidômetro RaVardi - 30 perguntas, 6 níveis de antissocialidade.">
+    <meta name="author" content="Psicólogo Ricardo de Faria Barros">
     
     <style>
         * {
@@ -21,14 +21,14 @@
         }
 
         body {
-            background: linear-gradient(145deg, #ffd700 0%, #ff8c00 50%, #ff1493 100%);
+            background: linear-gradient(-45deg, #ff0080, #ff4500, #ffdd00, #8b0000, #4b0082, #000000);
+            background-size: 400% 400%;
+            animation: gradientBG 18s ease infinite;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 16px 12px 30px;
-            animation: gradientBG 15s ease infinite;
-            background-size: 200% 200%;
         }
 
         @keyframes gradientBG {
@@ -42,19 +42,17 @@
             width: 100%;
         }
 
-        /* Header psicodélico */
         .header-vibrante {
-            background: linear-gradient(135deg, #ff0066, #ff7300, #ffdd00);
+            background: linear-gradient(135deg, #000000, #8b0000, #4b0082, #000000);
             padding: 20px 25px;
             border-radius: 60px 60px 30px 30px;
             margin-bottom: 25px;
-            border: 4px solid white;
+            border: 4px solid #ffdd00;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            box-shadow: 0 20px 30px rgba(0,0,0,0.3), 0 0 0 4px #ff00aa;
-            transform: rotate(0.5deg);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.5), 0 0 0 4px #ff1493;
         }
 
         .logo-70 {
@@ -64,22 +62,22 @@
         }
 
         .logo-70 .icon {
-            background: black;
-            color: #ffdd00;
+            background: #ffdd00;
+            color: #000;
             font-weight: 900;
             font-size: 42px;
             padding: 5px 20px;
             border-radius: 80px;
             border: 4px solid white;
             box-shadow: 0 0 30px #ffdd00;
-            text-shadow: 2px 2px 0 #ff0066;
+            text-shadow: 2px 2px 0 #8b0000;
         }
 
         .logo-70 span {
             color: white;
             font-size: 28px;
             font-weight: 900;
-            text-shadow: 3px 3px 0 #000, 5px 5px 0 #ff0066;
+            text-shadow: 3px 3px 0 #000, 5px 5px 0 #8b0000;
             letter-spacing: 2px;
         }
 
@@ -98,24 +96,19 @@
             color: #ffdd00;
         }
 
-        /* Card principal */
         .card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(10px);
             border-radius: 60px;
             padding: 30px 25px;
             margin-bottom: 25px;
-            border: 5px solid #ff00aa;
-            box-shadow: 0 30px 40px rgba(0,0,0,0.3), 0 0 0 5px #ffdd00;
+            border: 5px solid #ffdd00;
+            box-shadow: 0 30px 40px rgba(0,0,0,0.5), 0 0 0 5px #8b0000;
         }
 
         .titulo-universidade {
             text-align: center;
             margin-bottom: 30px;
-            background: linear-gradient(135deg, #ff0066, #ff7300);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .titulo-universidade h1 {
@@ -123,20 +116,21 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 4px;
-            text-shadow: 5px 5px 0 #ffdd00, 8px 8px 0 #ff1493;
+            color: #ffdd00;
+            text-shadow: 5px 5px 0 #8b0000, 8px 8px 0 #ff1493, 11px 11px 0 #4b0082;
             line-height: 1.2;
-            -webkit-text-fill-color: #ff0066;
         }
 
         .titulo-universidade h1 span {
             display: block;
             font-size: 2rem;
             letter-spacing: 8px;
-            -webkit-text-fill-color: #ff7300;
+            color: white;
+            text-shadow: 3px 3px 0 #8b0000, 5px 5px 0 #4b0082;
         }
 
         .subtitulo {
-            background: linear-gradient(135deg, #ff1493, #ff7300);
+            background: linear-gradient(135deg, #8b0000, #ff4500, #4b0082);
             color: white;
             padding: 18px;
             border-radius: 100px;
@@ -146,20 +140,19 @@
             margin: 20px 0;
             text-align: center;
             text-transform: uppercase;
-            box-shadow: 0 10px 0 #a0006b;
+            box-shadow: 0 10px 0 #000;
         }
 
-        /* Escala vibrante */
         .escala-fixa {
             display: flex;
-            background: linear-gradient(90deg, #2b2b2b, #000);
+            background: linear-gradient(90deg, #1a1a1a, #000);
             border-radius: 80px;
             padding: 15px 10px;
             margin: 25px 0 30px;
             border: 4px solid #ffdd00;
             flex-wrap: wrap;
             justify-content: center;
-            box-shadow: inset 0 -5px 0 #ff0066;
+            box-shadow: inset 0 -5px 0 #8b0000;
         }
 
         .escala-item {
@@ -169,7 +162,7 @@
             color: white;
             font-size: 14px;
             font-weight: bold;
-            border-right: 2px solid #ff0066;
+            border-right: 2px solid #8b0000;
         }
         .escala-item:last-child { border-right: none; }
         .escala-item .num { 
@@ -177,41 +170,38 @@
             font-size: 28px; 
             font-weight: 900;
             display: block;
-            text-shadow: 0 0 10px #ff7300;
+            text-shadow: 0 0 10px #ff4500;
         }
 
-        /* Perguntas */
         .pergunta {
-            background: linear-gradient(145deg, #fff, #fff0e0);
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
             border-radius: 50px;
             padding: 25px 20px;
             margin-bottom: 25px;
-            border: 3px solid #ff7300;
-            box-shadow: 0 10px 0 #b25300, 0 0 0 2px #ffdd00;
-            transform: scale(1);
+            border: 3px solid #ff4500;
+            box-shadow: 0 10px 0 #8b0000, 0 0 0 2px #ffdd00;
             transition: all 0.2s;
         }
 
         .pergunta:hover {
             transform: scale(1.01);
             border-color: #ff1493;
-            box-shadow: 0 15px 0 #b25300, 0 0 0 4px #ffdd00;
+            box-shadow: 0 15px 0 #8b0000, 0 0 0 4px #ffdd00;
         }
 
         .pergunta h3 {
-            background: linear-gradient(135deg, #ff1493, #ff7300);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #ffdd00;
             font-size: 1.6rem;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 12px;
             font-weight: 900;
+            text-shadow: 2px 2px 0 #8b0000;
         }
 
         .pergunta h3 .num {
-            background: #ff0066;
+            background: #8b0000;
             color: white;
             width: 45px;
             height: 45px;
@@ -222,19 +212,18 @@
             font-weight: 900;
             font-size: 1.8rem;
             border: 3px solid #ffdd00;
-            box-shadow: 0 5px 0 #a0006b;
+            box-shadow: 0 5px 0 #4b0082;
         }
 
         .pergunta p {
-            color: #333;
+            color: #fff;
             margin-bottom: 25px;
             font-size: 1.2rem;
             padding-left: 20px;
-            font-weight: 600;
-            border-left: 5px solid #ff7300;
+            font-weight: 500;
+            border-left: 5px solid #ff4500;
         }
 
-        /* Botões de escala */
         .opcoes-grid {
             display: flex;
             flex-wrap: wrap;
@@ -246,16 +235,16 @@
         .opcao-btn {
             flex: 1 0 80px;
             min-width: 80px;
-            background: linear-gradient(145deg, #f0f0f0, #d0d0d0);
-            border: 3px solid #aaa;
+            background: linear-gradient(145deg, #333, #1a1a1a);
+            border: 3px solid #666;
             border-radius: 60px;
             padding: 15px 5px;
             text-align: center;
-            color: #222;
+            color: white;
             font-weight: 900;
             cursor: pointer;
             transition: all 0.2s;
-            box-shadow: 0 6px 0 #888;
+            box-shadow: 0 6px 0 #000;
             font-size: 18px;
             line-height: 1.2;
             touch-action: manipulation;
@@ -265,17 +254,16 @@
         .opcao-btn small {
             display: block;
             font-size: 11px;
-            color: #444;
+            color: #aaa;
             font-weight: 600;
         }
 
         .opcao-btn.selected {
             background: linear-gradient(145deg, #ffdd00, #ffaa00);
-            border-color: #ff0066;
+            border-color: #8b0000;
             color: #000;
             transform: scale(1.05);
-            box-shadow: 0 0 30px #ffdd00, 0 6px 0 #b25300;
-            font-weight: 900;
+            box-shadow: 0 0 30px #ffdd00, 0 6px 0 #8b0000;
         }
 
         .opcao-btn.selected small {
@@ -283,9 +271,8 @@
             font-weight: 900;
         }
 
-        /* Barra de progresso neon */
         .progresso {
-            background: #222;
+            background: #000;
             border-radius: 50px;
             height: 20px;
             margin: 40px 0 25px;
@@ -296,7 +283,7 @@
 
         .progresso-barra {
             height: 100%;
-            background: linear-gradient(90deg, #ff0066, #ff7300, #ffdd00);
+            background: linear-gradient(90deg, #00ff88, #ffdd00, #ff4500, #8b0000, #4b0082);
             width: 0%;
             transition: width 0.3s;
             border-radius: 50px;
@@ -307,25 +294,24 @@
             text-align: center;
             font-size: 32px;
             font-weight: 900;
-            color: #222;
-            background: linear-gradient(145deg, #ffdd00, #ffaa00);
+            color: white;
+            background: linear-gradient(145deg, #222, #000);
             padding: 20px;
             border-radius: 80px;
-            border: 4px solid #ff0066;
+            border: 4px solid #ffdd00;
             margin: 25px 0;
-            box-shadow: 0 10px 0 #b25300;
+            box-shadow: 0 10px 0 #8b0000;
         }
 
         .pontuacao span {
-            color: #ff0066;
+            color: #ffdd00;
             font-size: 60px;
             font-weight: 900;
-            text-shadow: 2px 2px 0 #fff;
+            text-shadow: 2px 2px 0 #8b0000;
         }
 
-        /* Botões principais */
         .btn {
-            background: linear-gradient(145deg, #ff1493, #ff0066);
+            background: linear-gradient(145deg, #8b0000, #ff4500, #4b0082);
             border: none;
             color: white;
             font-weight: 900;
@@ -340,12 +326,12 @@
             border: 4px solid #ffdd00;
             margin-bottom: 20px;
             touch-action: manipulation;
-            box-shadow: 0 15px 0 #a0006b, 0 0 30px #ff1493;
+            box-shadow: 0 15px 0 #000;
         }
 
         .btn:active {
             transform: translateY(8px);
-            box-shadow: 0 7px 0 #a0006b;
+            box-shadow: 0 7px 0 #000;
         }
 
         .btn-secundario {
@@ -355,9 +341,8 @@
             box-shadow: 0 15px 0 #000;
         }
 
-        /* Resultado vibrante */
         .resultado-card {
-            background: linear-gradient(145deg, #1a1a1a, #000);
+            background: linear-gradient(145deg, #000, #1a1a1a);
             border-left: 20px solid;
             border-radius: 60px;
             padding: 35px;
@@ -366,35 +351,36 @@
             border: 4px solid #ffdd00;
         }
 
-        .faixa-1 { border-left-color: #00ff88; background: linear-gradient(145deg, #003322, #001a0e); }
-        .faixa-2 { border-left-color: #ffdd00; background: linear-gradient(145deg, #443300, #221a00); }
-        .faixa-3 { border-left-color: #ff7300; background: linear-gradient(145deg, #442200, #221100); }
-        .faixa-4 { border-left-color: #ff0066; background: linear-gradient(145deg, #440022, #220011); }
-        .faixa-5 { border-left-color: #ff0000; background: linear-gradient(145deg, #330000, #1a0000); }
+        /* 6 NÍVEIS DE ANTISSOCIALIDADE */
+        .faixa-1 { border-left-color: #2ecc71; background: linear-gradient(145deg, #003322, #001a0e); }
+        .faixa-2 { border-left-color: #f1c40f; background: linear-gradient(145deg, #443300, #221a00); }
+        .faixa-3 { border-left-color: #ff9900; background: linear-gradient(145deg, #442200, #221100); }
+        .faixa-4 { border-left-color: #ff4500; background: linear-gradient(145deg, #442200, #331100); }
+        .faixa-5 { border-left-color: #8b0000; background: linear-gradient(145deg, #440000, #220000); }
+        .faixa-6 { border-left-color: #4b0082; background: linear-gradient(145deg, #1a0033, #0a001a); border-right: 10px solid #ffdd00; }
 
         .resultado-card h2 {
             font-size: 4rem;
             margin-bottom: 15px;
             color: #ffdd00;
-            text-shadow: 3px 3px 0 #ff0066;
+            text-shadow: 3px 3px 0 #8b0000;
         }
 
-        /* Pesquisa box */
         .pesquisa-box {
             background: linear-gradient(145deg, #ffdd00, #ffaa00);
-            border: 6px solid #ff0066;
+            border: 6px solid #8b0000;
             border-radius: 70px;
             padding: 40px 25px;
             text-align: center;
             margin: 40px 0;
-            box-shadow: 0 20px 0 #b25300;
+            box-shadow: 0 20px 0 #4b0082;
         }
 
         .pesquisa-box h3 {
             color: #000;
             font-size: 2.8rem;
             font-weight: 900;
-            text-shadow: 2px 2px 0 #ff0066;
+            text-shadow: 2px 2px 0 #8b0000;
         }
 
         .pesquisa-box p {
@@ -405,7 +391,7 @@
         }
 
         .link-pesquisa {
-            background: #ff0066;
+            background: #8b0000;
             color: white;
             font-weight: 900;
             font-size: 2rem;
@@ -415,13 +401,13 @@
             display: block;
             width: 100%;
             border: 5px solid #ffdd00;
-            box-shadow: 0 15px 0 #a0006b;
+            box-shadow: 0 15px 0 #4b0082;
             transition: 0.2s;
         }
 
         .link-pesquisa:active {
             transform: translateY(8px);
-            box-shadow: 0 7px 0 #a0006b;
+            box-shadow: 0 7px 0 #4b0082;
         }
 
         .footer {
@@ -434,20 +420,25 @@
         }
 
         .disclaimer {
-            background: rgba(255,255,255,0.9);
+            background: rgba(0,0,0,0.8);
             border-radius: 50px;
             padding: 25px;
             font-size: 1rem;
-            color: #222;
-            border: 4px solid #ff0066;
+            color: #ddd;
+            border: 4px solid #8b0000;
             margin-top: 30px;
-            font-weight: 600;
+        }
+        
+        @media (max-width: 600px) {
+            .titulo-universidade h1 { font-size: 2.5rem; }
+            .opcao-btn { min-width: 60px; font-size: 16px; }
+            .pergunta p { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
     <div class="site-container">
-        <!-- Header 70+ vibrante -->
+        <!-- Header 70+ -->
         <div class="header-vibrante">
             <div class="logo-70">
                 <div class="icon">70+</div>
@@ -462,7 +453,7 @@
         <div class="card">
             <div class="titulo-universidade">
                 <h1>UNIVERSIDADE <span>RAVARDI</span></h1>
-                <div class="subtitulo">🔥 SOLIDÔMETRO PSICOPATIA SOCIAL - EDIÇÃO 70+ 🔥</div>
+                <div class="subtitulo">🔥 6 NÍVEIS DE ANTISSOCIALIDADE - 30 PERGUNTAS 🔥</div>
             </div>
 
             <!-- Escala fixa -->
@@ -488,7 +479,7 @@
             </div>
 
             <!-- Botões -->
-            <button class="btn" id="calcular-btn">🔮 REVELAR MINHA LOUCURA</button>
+            <button class="btn" id="calcular-btn">🔮 REVELAR MEU NÍVEL</button>
             <button class="btn btn-secundario" id="limpar-btn">🗑️ LIMPAR TUDO</button>
 
             <!-- Resultado -->
@@ -497,16 +488,16 @@
             <!-- Pesquisa -->
             <div class="pesquisa-box">
                 <h3>📊 PESQUISA SOBRE SOLIDÃO</h3>
-                <p>Ajude a Universidade RaVardi a entender o fenômeno da psicopatia social</p>
+                <p>Conte sua história, ajude-nos a mapear o fenômeno social da solidão longeva.</p>
                 <a href="https://forms.gle/v65ahBGrdn9DxVM99" target="_blank" rel="noopener noreferrer" class="link-pesquisa">
                     🔗 ACESSAR PESQUISA 70+
                 </a>
             </div>
 
             <div class="disclaimer">
-                <strong>⚠️ AVISO DE SÁTIRA PURA:</strong> Este teste é uma obra de humor ácido. Se você se identificou com os níveis mais altos, talvez seja hora de terapia, não de um prêmio. A RaVardi não se responsabiliza por porteiros traumatizados, enfermeiras chorando ou parentes bloqueados.
+                <strong>⚠️ AVISO DE SÁTIRA PURA:</strong> Este teste é uma obra de humor ácido. Use como um espaço pedagógico, do jogo do contrário, produzindo um espaço de autoconhecimento e mudança. 
                 <br><br>
-                <strong>Autor:</strong> Ricardo de Faria Barros - Todos os direitos reservados.
+                <strong>Autor:</strong> Ricardo de Faria Barros - 2026 - Todos os direitos reservados.
             </div>
         </div>
 
@@ -517,7 +508,7 @@
 
     <script>
         (function() {
-            // 30 PERGUNTAS - incluindo as 8 novas ácidas
+            // 30 PERGUNTAS ÚNICAS
             const perguntas = [
                 // Originais (1-11)
                 { t: "Invisibilidade Seletiva", tx: "Quando surge oportunidade de conhecer pessoas novas, encontro desculpas para evitar.", ops: ["Adoro gente nova", "Só se for obrigado", "Depende da comida", "Já invento desculpas", "Lavar cabelo do peixe"] },
@@ -532,28 +523,28 @@
                 { t: "Desistência Antecipada", tx: "Desafio novo? 'Já passei da idade'.", ops: ["Idade é número", "Vou reclamando", "Se não der trabalho", "'Pra quê?' automático", "Desisti da frase"] },
                 { t: "Campo Repulsivo", tx: "Sou amargo, crítico, reclamo. Pessoas fogem.", ops: ["Alegria em pessoa", "Reclamo do justo", "Vida é dura", "Reclamar é hobby", "Fogem? são chatos"] },
                 
-                // Novas 8 questões ácidas (12-19)
-                { t: "Terror da Enfermagem", tx: "Trato mal a equipe de enfermagem quando estou internado. Eles estão ali pra me servir.", ops: ["Sou um doce", "Trato bem, mas reclamo", "Ignoro", "Trato com rispidez", "Já fiz enfermeira chorar"] },
+                // Novas questões (12-25)
+                { t: "Terror da Enfermagem", tx: "Trato mal a equipe de enfermagem quando estou internado.", ops: ["Sou um doce", "Trato bem, mas reclamo", "Ignoro", "Trato com rispidez", "Já fiz enfermeira chorar"] },
                 { t: "Invisível pra Diarista", tx: "A diarista/faxineiro não existe. Passo por ela como se fosse móvel.", ops: ["Sou amigável", "Cumprimento", "Às vezes ignoro", "Finjo que não vejo", "Móvel humano"] },
-                { t: "Sincericídio em Massa", tx: "Cometo sincericídios sem freio social. Falo o que penso na hora, foda-se.", ops: ["Filtro tudo", "Às vezes escorrego", "Falo, mas penso", "Falo e danese", "Sou um atentado"] },
-                { t: "Porteiro Invisível", tx: "Trato mal ou ignoro completamente o porteiro do prédio.", ops: ["Sou educado", "Cumprimento se ele cumprimentar", "Às vezes ignoro", "Passo reto sempre", "Já reclamei dele de graça"] },
+                { t: "Sincericídio em Massa", tx: "Cometo sincericídios sem freio social. Falo o que penso na hora.", ops: ["Filtro tudo", "Às vezes escorrego", "Falo, mas penso", "Falo e danese", "Sou um atentado"] },
+                { t: "Porteiro Fantasma", tx: "Passo reto pelo porteiro como se ele fosse invisível.", ops: ["Sempre cumprimento", "Cumprimento se ele vir", "Às vezes ignoro", "Passo reto sempre", "Já reclamei dele"] },
                 { t: "Meteção de Colher", tx: "Em família, me meto em assuntos privados que não são da minha conta.", ops: ["Fico na minha", "Só pergunto uma vez", "Opino com cuidado", "Já acho que é meu direito", "Sou o dono da verdade"] },
                 { t: "Fantasma Telefônico", tx: "Não atendo telefonemas. Deixo tocar até parar.", ops: ["Atendo sempre", "Se for conhecido", "Se estiver com vontade", "Dificilmente atendo", "Telefone é opressor"] },
-                { t: "Esquecimento Seletivo de Aniversários", tx: "Nunca ligo nos aniversários. Nem dos parentes próximos.", ops: ["Lembro sempre", "Só dos próximos", "Depende do humor", "Raramente ligo", "Aniversário? data qualquer"] },
+                { t: "Esquecimento de Aniversários", tx: "Nunca ligo nos aniversários. Nem dos parentes.", ops: ["Lembro sempre", "Só dos próximos", "Depende do humor", "Raramente ligo", "Aniversário? data qualquer"] },
                 { t: "Paranoia Generalizada", tx: "Considero todo mundo suspeito e mau, até que provem o contrário.", ops: ["Confio em todos", "Desconfio um pouco", "Confio, mas vigio", "Desconfio de todos", "Só eu presto"] },
-                
-                // Mais 11 para completar 30 (20-30)
                 { t: "Guerra contra o Mundo", tx: "Vivo em briga com o mundo, atitude de guerra permanente.", ops: ["Paz e amor", "Defendo quando atacado", "Ataco se provocado", "Vivo no ataque", "Guerra declarada"] },
                 { t: "Ingratidão Profissional", tx: "Sou ingrato. Não agradeço nem reconheço esforços alheios.", ops: ["Agradeço sempre", "Às vezes esqueço", "Só se fizerem muito", "Raramente agradeço", "Obrigado? que palavra é essa?"] },
-                { t: "Invisibilidade Social", tx: "Não reconheço ninguém. Nem quem já me ajudou.", ops: ["Reconheço todos", "Esqueço rostos", "Só quem é próximo", "Fingimento total", "Quem é você mesmo?"] },
-                { t: "Nunca Ceder", tx: "Nunca cedo. Nem peço perdão. Prefiro romper.", ops: ["Peço perdão fácil", "Cedo se tiver razão", "Dificilmente cedo", "Não peço desculpas", "Perdão é fraqueza"] },
+                { t: "Cegueira Social", tx: "Não reconheço conhecidos na rua. Finjo que não vi.", ops: ["Reconheço todos", "Aceno se me virem", "Só quem é próximo", "Fingimento total", "Quem é você mesmo?"] },
+                { t: "Nunca Ceder", tx: "Nunca cedo em discussões. Nem peço perdão.", ops: ["Peço perdão fácil", "Cedo se tiver razão", "Dificilmente cedo", "Não peço desculpas", "Perdão é fraqueza"] },
                 { t: "Arrogância Extrema", tx: "Sou arrogante e autossuficiente ao extremo. Ninguém me ensina nada.", ops: ["Humilde sempre", "Aceito ajudar", "Sei que não sei tudo", "Já sei tudo", "Sou o mestre"] },
                 { t: "Egocentrismo Total", tx: "Tudo gira em torno de mim. O mundo é meu palco.", ops: ["Penso nos outros", "Tento equilibrar", "Às vezes sou o centro", "Geralmente sou o centro", "O universo sou eu"] },
-                { t: "Empatia Zero", tx: "Não tenho a mínima empatia por ninguém. Problema dos outros não é meu.", ops: ["Empatia é meu forte", "Tento me importar", "Depende da pessoa", "Cansaço de gente", "O que é empatia?"] },
-                { t: "Porteiro Parte 2", tx: "Trato mal o porteiro. De novo. É tão bom.", ops: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Hobby favorito"] },
-                { t: "Diarista Invisível 2", tx: "Finjo que a diarista é transparente. Até esbarro de propósito.", ops: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Jogo copo no chão"] },
-                { t: "Enfermeira Terror 2", tx: "Maltrato enfermeira só pelo esporte.", ops: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Já tenho ficha no hospital"] },
-                { t: "Sincericídio em Família", tx: "Falo verdades podres em almoço de família. Sem filtro.", ops: ["Nunca", "Raramente", "Às vezes", "Frequentemente", "Já destruí 3 natais"] }
+                
+                // Questões especiais (26-30)
+                { t: "O Chato do Churrasco", tx: "Em todo churrasco em família, reclamo que a carne está mal passada, sem sal, dura...", ops: ["Elogio a carne", "Só reclamo se tiver motivo", "Dou uma sugestão", "Reclamo sempre", "Já levei minha própria carne"] },
+                { t: "Vovô 'No Meu Tempo'", tx: "Passo o tempo todo brigando com os netos e falando 'no meu tempo era muito melhor'.", ops: ["Adoro os netos", "Só dou conselhos", "Às vezes comparo", "Brigo frequentemente", "'No meu tempo' é meu mantra"] },
+                { t: "O Desistente de Última Hora", tx: "Desisto de compromissos 10 minutos antes, quando todos já estão esperando, com um 'da próxima eu vou'.", ops: ["Cumpro sempre", "Só cancelo se urgente", "Aviso com horas", "Já fiz isso algumas vezes", "Especialista em cancelar"] },
+                { t: "O Agressivo de Festa", tx: "Quando bebo (ou mesmo sóbrio), fico agressivo, assedio mulheres e arrumo confusão.", ops: ["Bebo em paz", "Fico alegre", "Falo besteira às vezes", "Já causei confusão", "Sou o risco da festa"] },
+                { t: "O Incendiário de Família", tx: "Estrago toda festa de família criticando e provocando todo mundo. Um verdadeiro incendiário.", ops: ["Paz e amor", "Só brinco", "Às vezes provoco", "Já estraguei algumas", "Sou o motivo da briga"] }
             ];
 
             let respostas = new Array(30).fill(null);
@@ -620,41 +611,50 @@
                 const respondidas = respostas.filter(r => r !== null).length;
                 
                 if (respondidas < 30) {
-                    alert(`⚠️ Respondeu apenas ${respondidas} de 30. A RaVardi exige dedicação total à psicopatia!`);
+                    alert(`⚠️ Respondeu apenas ${respondidas} de 30. A antissocialidade exige dedicação total!`);
                     return;
                 }
 
                 let faixa, descricao, classe;
-                if (total <= 55) {
-                    faixa = 'Iniciante (Falso arrogante)';
-                    descricao = 'Você até tenta ser antisocial, mas no fundo é um querido. Ainda segura porta pra velhinha. Fraco.';
+                
+                // 6 NÍVEIS DE ANTISSOCIALIDADE - COM NÍVEIS 1 E 2 SUPER POSITIVOS
+                if (total <= 40) {
+                    faixa = 'NÍVEL 1 - Querido por Todos';
+                    descricao = 'Parabéns! Você é daquelas pessoas que ilumina o ambiente. Cumprimenta o porteiro, elogia a carne do churrasco (mesmo quando está ruins), lembra dos aniversários e é um amor de pessoa. A RaVardi está orgulhosa... e desconfiada. Ninguém é tão bom assim. Você esconde algo? Ou só é muito gente boa mesmo? Fica a pulga atrás da orelha...';
                     classe = 'faixa-1';
-                } else if (total <= 80) {
-                    faixa = 'Aspirante a Babaca';
-                    descricao = 'Já esquece aniversários e ignora o porteiro de vez em quando. Tem futuro no ódio.';
+                } else if (total <= 65) {
+                    faixa = 'NÍVEL 2 - Equilibrado';
+                    descricao = 'Você é uma pessoa sociável, educada, mas tem seus limites. Já deu aquela ignorada no porteiro quando está com pressa, já esqueceu um aniversário ou outro, mas no geral é gente boa. A RaVardi reconhece: você é normal. Mas cuidado... essa normalidade pode ser o começo da decadência. Fica a pulga.';
                     classe = 'faixa-2';
-                } else if (total <= 105) {
-                    faixa = 'Solitário em Treinamento';
-                    descricao = 'Já trata mal enfermeira e acha que o mundo gira em torno de você. Quase lá.';
+                } else if (total <= 90) {
+                    faixa = 'NÍVEL 3 - Desconfiado';
+                    descricao = 'Você já começa a desconfiar das pessoas. Já teve vontade de mandar a enfermeira pastar, já ignorou o porteiro de propósito e já reclamou da carne no churrasco. A família ainda te convida, mas já olham torto. Você está no caminho da antissocialidade.';
                     classe = 'faixa-3';
-                } else if (total <= 130) {
-                    faixa = 'Profissional do Isolamento';
-                    descricao = 'Você é antipático por natureza. Porteiros fogem, diaristas pedem transferência. Respeito.';
+                } else if (total <= 115) {
+                    faixa = 'NÍVEL 4 - Arisco';
+                    descricao = 'Você é aquele parente que todo mundo torce pra não ir. Reclama de tudo, se mete em assuntos alheios, e já arrumou confusão em festa. Já não é convidado para todos os eventos. As pessoas te acham "difícil".';
                     classe = 'faixa-4';
-                } else {
-                    faixa = 'Lenda da Psicopatia Social';
-                    descricao = 'Cuidado. Você pode ser um caso de estudo. Já fez 3 enfermeiras chorarem, 2 porteiros pedirem demissão e 1 diarista largar a profissão. O ódio é sua arte.';
+                } else if (total <= 135) {
+                    faixa = 'NÍVEL 5 - Antissocial Profissional';
+                    descricao = 'Você já estragou múltiplos churrascos, fez netos chorarem, assediou em festas e já foi tema de conversas "não convida ele não". Você é lendário (no mau sentido). Porteiros fingem que não te veem.';
                     classe = 'faixa-5';
+                } else {
+                    faixa = 'NÍVEL 6 - Lenda do Isolamento';
+                    descricao = 'CUIDADO. Você não é mais convidado pra nada. Já destruiu todas as relações familiares, tem boletins de ocorrência, enfermeiras com trauma, porteiros que pedem demissão quando você aparece. Você é um caso de estudo. A RaVardi te concede o título de "O Ermitão".';
+                    classe = 'faixa-6';
                 }
 
                 const frase = [
-                    "O importante na vida é fazer os outros se sentirem inferiores.",
-                    "Porteiros são como móveis, mas móveis são mais úteis.",
+                    "A carne sempre está ruim, o problema é o churrasqueiro.",
+                    "No meu tempo é que era bom... pena que ninguém aguenta mais ouvir isso.",
+                    "Da próxima eu vou! (mentira, nunca vou)",
+                    "Bebi água, mas a confusão foi geral. Só água, juro!",
+                    "Família é onde a gente aprende a odiar.",
+                    "70+ é minha nota em destruir relações.",
                     "Enfermeira não é gente, é serviço.",
-                    "Sincericídio: matei minha família no almoço de domingo.",
-                    "O mundo que se adapte a mim.",
-                    "70+ é minha nota em humanidade."
-                ][Math.floor(Math.random() * 6)];
+                    "Porteiro? Aquele obstáculo?",
+                    "Será que eu sou tão bom assim? Ou só estou enganando a mim mesmo?"
+                ][Math.floor(Math.random() * 9)];
 
                 document.getElementById('resultado-area').innerHTML = `
                     <div class="resultado-card ${classe}">

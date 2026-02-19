@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual do Solitário Profissional - Rá Vardi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background: linear-gradient(135deg, #2b2b2b 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .pdf-container {
+            max-width: 800px;
+            width: 100%;
+            background: #f5f5f5;
+            border-radius: 30px;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background: #1a1a1a;
+            color: #d4af37;
+            padding: 40px 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid #d4af37;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0 #000;
+            margin-bottom: 10px;
+        }
+
+        .header h1 span {
+            color: #fff;
+            font-style: italic;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            color: #fff;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .header .sub {
+            background: #333;
+            color: #d4af37;
+            padding: 10px;
+            border-radius: 50px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Conteúdo */
+        .content {
+            padding: 30px;
+            background: #fff;
+        }
+
+        .intro {
+            background: #eaeaea;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #d4af37;
+            font-style: italic;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .intro strong {
+            color: #8b0000;
+        }
+
+        .instrucoes {
+            background: #f9f3d9;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px dashed #d4af37;
+        }
+
+        .instrucoes p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .escala-ref {
+            display: flex;
+            justify-content: space-between;
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .escala-ref div {
+            flex: 1;
+        }
+
+        /* Perguntas */
+        .pergunta {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            page-break-inside: avoid;
+        }
+
+        .pergunta h3 {
+            color: #8b0000;
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 8px;
+        }
+
+        .pergunta p {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .tabela-opcoes {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .tabela-opcoes th {
+            background: #d4af37;
+            color: #1a1a1a;
+            font-size: 12px;
+            padding: 8px 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .tabela-opcoes td {
+            border: 1px solid #aaa;
+            padding: 10px 5px;
+            text-align: center;
+            vertical-align: middle;
+            background: #fafafa;
+        }
+
+        .tabela-opcoes td:first-child {
+            font-weight: bold;
+            background: #eaeaea;
+        }
+
+        .opcao-desc {
+            font-size: 12px;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Resultados */
+        .resultados {
+            margin-top: 40px;
+        }
+
+        .resultado-box {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 10px solid;
+            page-break-inside: avoid;
+        }
+
+        .resultado-box h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .resultado-box p {
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .faixa-1 { border-left-color: #2ecc71; }
+        .faixa-2 { border-left-color: #f1c40f; }
+        .faixa-3 { border-left-color: #e67e22; }
+        .faixa-4 { border-left-color: #c0392b; }
+
+        .footer {
+            background: #1a1a1a;
+            color: #aaa;
+            padding: 25px 30px;
+            font-size: 13px;
+            text-align: center;
+            border-top: 1px solid #d4af37;
+        }
+
+        .footer strong {
+            color: #d4af37;
+        }
+
+        .aviso {
+            background: #f9e1e1;
+            border: 2px solid #c0392b;
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #d4af37, transparent);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="pdf-container">
+        <!-- Cabeçalho -->
+        <div class="header">
+            <h1>🏆 UNIVERSIDADE <span>RÁ VARDI</span> 🏆</h1>
+            <h2>O Grande Manual de Autoajuda<br>(Ou Autossabotagem)</h2>
+            <div class="sub">CERTIFICAÇÃO EM SOLIDÃO PROFISSIONAL</div>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="content">
+            <div class="intro">
+                <strong>Cansado da farra interminável que é o convívio social?</strong> Enjoado de gente feliz, de convites incômodos e da pressão terrível para ser uma pessoa "funcional"? Então você veio ao lugar certo!<br><br>
+                Este teste foi cuidadosamente elaborado por nossos melhores professores <em>(que não se falam há anos)</em> para medir com precisão o seu QS (Quociente de Solidão).
+            </div>
+
+            <div class="instrucoes">
+                <p>📋 INSTRUÇÕES:</p>
+                <div class="escala-ref">
+                    <div>1 - NUNCA<br><small>"Credo, que absurdo!"</small></div>
+                    <div>2 - RARAMENTE<br><small>"Só em lua azul"</small></div>
+                    <div>3 - ÀS VEZES<br><small>"Depende do dia"</small></div>
+                    <div>4 - FREQUENTE<br><small>"Já é hábito"</small></div>
+                    <div>5 - SEMPRE<br><small>"Sou o manual vivo"</small></div>
+                </div>
+            </div>
+
+            <!-- Pergunta 1 -->
+            <div class="pergunta">
+                <h3>1. A Técnica da Invisibilidade Seletiva</h3>
+                <p>Quando surge a oportunidade de conhecer pessoas novas, eu prontamente encontro uma desculpa para evitar.</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Credo, que absurdo! Ainda tenho um pingo de amor-próprio.</td>
+                        <td>Só se for num dia de extrema fraqueza e lua cheia.</td>
+                        <td>Depende do meu humor e de quem está pedindo.</td>
+                        <td>Já virou um esporte, mas ainda finjo que tenho escolha.</td>
+                        <td>Li no manual da Rá Vardi e nunca mais olhei para trás.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta">
+                <h3>2. O Mantra do Autossuficiente</h3>
+                <p>Minha frase favorita é "Eu não preciso de ninguém", e eu a repito até acreditar (e fazer os outros acreditarem).</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Que dramático! Eu adoro precisar dos outros.</td>
+                        <td>Só falo isso depois de levar um fora.</td>
+                        <td>Tem dias que odeio todo mundo.</td>
+                        <td>É meu mantra matinal junto com o café.</td>
+                        <td>Tenho tatuado no antebraço, em neon.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="pergunta">
+                <h3>3. O Cultivo do "Já Era"</h3>
+                <p>Deixo minhas ideias e projetos de lado com a justificativa de que "já é tarde demais" ou "pra quê?".</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Sou realizador! Começo tudo que termino... ou não.</td>
+                        <td>Só desisto se for muito difícil.</td>
+                        <td>Quando bate a preguiça, sim.</td>
+                        <td>"Pra quê?" é meu segundo nome.</td>
+                        <td>Já tive preguiça de terminar essa resposta.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="pergunta">
+                <h3>4. A Arte da Autossuficiência Precária</h3>
+                <p>Recuso ajuda com orgulho e evito oferecer a minha, preferindo fazer tudo sozinho, mesmo que malfeito.</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Adoro trabalho em grupo! Quanto mais, melhor.</td>
+                        <td>Só peço ajuda se estiver sangrando muito.</td>
+                        <td>Pedir ajuda é tão trabalhoso...</td>
+                        <td>Faço tudo sozinho. Mal feito, mas sozinho.</td>
+                        <td>Ninguém faz como eu (mal feito).</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="pergunta">
+                <h3>5. O Treinamento Ninja da Autonegação</h3>
+                <p>Cuidar da minha saúde, alimentação e bem-estar é uma tarefa que eu consistentemente adio ou ignoro.</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Durmo 8h, como salada e faço meditação.</td>
+                        <td>Só vou ao médico quando o negócio fica preto.</td>
+                        <td>O importante é ser feliz... fast food me faz feliz.</td>
+                        <td>Saúde? Isso passa.</td>
+                        <td>Meu médico me mandou uma carta: "Querido, suma."</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Pergunta 6 -->
+            <div class="pergunta">
+                <h3>6. A Celebração do Vazio</h3>
+                <p>Datas comemorativas e conquistas são tratadas como "bobagens" ou "besteiras", e eu prefiro que passem em silêncio.</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Adoro um parabéns! Bolo e festa sempre!</td>
+                        <td>Comemoro, mas sem muito estardalhaço.</td>
+                        <td>Se for feriado, ótimo. Se não, tanto faz.</td>
+                        <td>"Só mais um dia", repito encolhendo a alma.</td>
+                        <td>Qual é a diferença entre terça e domingo mesmo?</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Pergunta 7 -->
+            <div class="pergunta">
+                <h3>7. O Cofre Emocional Blindado</h3>
+                <p>Mantenho meus sentimentos, histórias e experiências trancados a sete chaves, como um cofre emocional impenetrável.</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Sou um livro aberto! Vem, vou te contar minha vida.</td>
+                        <td>Só abro pra confidentes de longa data.</td>
+                        <td>Falo o básico. O resto é meu.</td>
+                        <td>Ninguém merece meus problemas.</td>
+                        <td>Tenho sentimentos? Ainda não confirmei.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Pergunta 8 -->
+            <div class="pergunta">
+                <h3>8. O Monólogo Interativo</h3>
+                <p>Em conversas, eu me concentro mais em expressar minhas próprias opiniões do que em ouvir os outros.</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Sou todo ouvidos! Fala que eu escuto.</td>
+                        <td>Escuto, mas já preparando minha resposta.</td>
+                        <td>Se o assunto for interessante, escuto.</td>
+                        <td>Tenho tanta coisa importante pra dizer!</td>
+                        <td>...como eu ia dizendo antes de você interromper...</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Pergunta 9 -->
+            <div class="pergunta">
+                <h3>9. A Estratégia de Fuga Ápice</h3>
+                <p>Quando sou convidado(a) para eventos sociais, minha primeira reação é pensar em uma forma de não comparecer.</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Já tô indo! Só me dá 5 minutos.</td>
+                        <td>Vou, mas fico 40 minutos e vou sem dar tchau.</td>
+                        <td>Vou se tiver comida boa e ar condicionado.</td>
+                        <td>Já cansei só de pensar em trocar de roupa.</td>
+                        <td>"Vou ver e te confirmo" = "nunca mais".</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Pergunta 10 -->
+            <div class="pergunta">
+                <h3>10. O Poder da Desistência Antecipada</h3>
+                <p>Diante de um novo desafio ou recomeço, eu me rendo à ideia de que "já passei da idade" ou "não tenho mais tempo".</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Idade é só número! Vou começar agora mesmo!</td>
+                        <td>Vou, mas reclamando das dores nas costas.</td>
+                        <td>Se não der muito trabalho, vou.</td>
+                        <td>"Pra quê?" já vem automático.</td>
+                        <td>Comecei a ler essa frase e já desisti no meio.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Pergunta 11 -->
+            <div class="pergunta">
+                <h3>11. O Campo de Força Repulsivo</h3>
+                <p>Sou frequentemente amargo(a), crítico(a) e reclamo de tudo, garantindo que as pessoas me evitem por instinto de sobrevivência.</p>
+                <table class="tabela-opcoes">
+                    <tr>
+                        <th>1 - NUNCA</th>
+                        <th>2 - RARAMENTE</th>
+                        <th>3 - ÀS VEZES</th>
+                        <th>4 - FREQUENTE</th>
+                        <th>5 - SEMPRE</th>
+                    </tr>
+                    <tr>
+                        <td>Sou a alegria em pessoa! O sol brilha quando acordo.</td>
+                        <td>Só reclamo do que realmente merece: tudo.</td>
+                        <td>A vida é dura, então sou dura também.</td>
+                        <td>Reclamar é meu esporte favorito.</td>
+                        <td>As pessoas me fogem? Elas são todas chatas mesmo.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <hr>
+
+            <!-- Resultados -->
+            <div class="resultados">
+                <h2 style="color:#8b0000; margin-bottom:20px;">📊 SEU RESULTADO NO SOLIDÔMETRO RÁ VARDI 📊</h2>
+
+                <div class="resultado-box faixa-1">
+                    <h4>11 - 22 Pontos: Iniciante na Solidão (Ainda há resquícios de vida social)</h4>
+                    <p>Parece até um erro. Você ainda tem lampejos de sanidade e, ocasionalmente, sente falta de gente. A Rá Vardi está profundamente decepcionada com seu desempenho amador. Porém, se você se esforçar e ignorar sistematicamente todos os convites da próxima semana, ainda pode repetir de ano e virar um aluno medíocre.</p>
+                </div>
+
+                <div class="resultado-box faixa-2">
+                    <h4>23 - 33 Pontos: Aspirante a Solitário (Potencial em Desenvolvimento)</h4>
+                    <p>Tem futuro, mas falta empenho. Você já domina a arte de cancelar compromissos de última hora e sabe o poder de um "não" seco. Porém, vez ou outra, a carência bate na porta e você abre. Fora, carência! Com mais disciplina para sabotar suas relações, você sobe de nível.</p>
+                </div>
+
+                <div class="resultado-box faixa-3">
+                    <h4>34 - 44 Pontos: Solitário em Treinamento (Quase Lá!)</h4>
+                    <p>O isolamento já é um hobby. Parabéns! Você já troca encontros por séries, e conversas por monólogos internos. Sua vida começa a se organizar em torno do seu próprio umbigo. A Rá Vardi já enviou um certificado de conclusão de curso básico para o seu endereço vazio. Continue assim e evite qualquer contato visual.</p>
+                </div>
+
+                <div class="resultado-box faixa-4">
+                    <h4>45 - 55 Pontos: Solitário Profissional Certificado (Mestre do Isolamento)</h4>
+                    <p>Uau. Apenas uau. Você não é mais um aluno, é um case de sucesso! Seguiu todas as lições à risca e agora vive numa bolha hermética impenetrável. Suas habilidades de repelir, ignorar e desistir são lendárias. O silêncio é seu melhor amigo e a única coisa que te liga ao mundo exterior é a fatura do cartão de crédito. A Rá Vardi se curva diante do seu vazio existencial.</p>
+                </div>
+            </div>
+
+            <!-- Aviso -->
+            <div class="aviso">
+                <strong>⚠️ AVISO PÓS-TESTE:</strong> Este manual foi criado em nosso laboratório de cinismo. A solidão, quando escolhida, é um oásis. Mas quando é resultado de um campo minado de defesas, pode virar um deserto. Se você sentiu uma pontada de incômodo genuíno ao ler os níveis mais altos, considere isso um sinal de fumaça. Talvez seja a hora de sair do modo avião e dar um "oi" para o mundo real. Mas sério, sem pressão. Fique à vontade... ou não.
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="footer">
+            <p><strong>UNIVERSIDADE RÁ VARDI</strong> — Certificação em Isolamento de Qualidade</p>
+            <p style="margin-top:10px;">© 2025 - Todos os direitos reservados (mas você pode ficar com eles, não vamos sair de casa pra cobrar).</p>
+        </div>
+    </div>
+</body>
+</html>
